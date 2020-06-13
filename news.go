@@ -211,7 +211,7 @@ func newshandler(w http.ResponseWriter,r *http.Request){
 	//fmt.Println(m.Articles[0])
 	var n News
 	var Wid News
-	for i:=0;i<10;i++{
+	for i:=0;i<25;i++{
 		n.Articles=append(n.Articles,m.Articles[i])
 		if i<=5{
 			Wid.Articles=append(Wid.Articles,m.Articles[i])
@@ -245,7 +245,7 @@ func internationalnewshandler(w http.ResponseWriter,r *http.Request){
 	var Wid News
 	n.Articles=nil
 	Wid.Articles=nil
-	for i:=0;i<10;i++{
+	for i:=0;i<25;i++{
 		n.Articles=append(n.Articles,m.Articles[i])
 		if i<=5{
 			Wid.Articles=append(Wid.Articles,m.Articles[i])
@@ -280,7 +280,7 @@ func categoryhandler(w http.ResponseWriter,r *http.Request){
 	var Wid News
 	n.Articles=nil
 	Wid.Articles=nil
-	for i:=0;i<10;i++{
+	for i:=0;i<25;i++{
 		n.Articles=append(n.Articles,m.Articles[i])
 		if i<=5{
 			Wid.Articles=append(Wid.Articles,m.Articles[i])
@@ -359,7 +359,7 @@ func articlehandler(w http.ResponseWriter,r *http.Request){
 	//fmt.Println(m.Articles)
 	var n News
 	var Wid News
-	for i:=0;i<10;i++{
+	for i:=0;i<25;i++{
 		n.Articles=append(n.Articles,m.Articles[i])
 		if i<=5{
 			Wid.Articles=append(Wid.Articles,m.Articles[i])
