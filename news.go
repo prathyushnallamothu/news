@@ -228,7 +228,7 @@ func newshandler(w http.ResponseWriter,r *http.Request){
 	tpl.ExecuteTemplate(w,"news.html",data)
 }
 func internationalnewshandler(w http.ResponseWriter,r *http.Request){
-	resp,err:=http.Get("http://newsapi.org/v2/top-headlines?country=in&apiKey=e38d0ce8e7ce4039aebfcd6a634ffe9c")
+	resp,err:=http.Get("http://newsapi.org/v2/top-headlines?language=en&apiKey=e38d0ce8e7ce4039aebfcd6a634ffe9c")
 	if err!=nil{
 		log.Fatal(err)
 	}
@@ -344,7 +344,7 @@ func articlehandler(w http.ResponseWriter,r *http.Request){
 	article:=r.FormValue("data")
 	info:=strings.Fields(article)
 	url:="http://newsapi.org/v2/everything?q="+info[0]
-	resp,err:=http.Get(url+"&from=2020-05-13&sortBy=publishedAt&apiKey=e38d0ce8e7ce4039aebfcd6a634ffe9c")
+	resp,err:=http.Get(url+"&language=en&sortBy=publishedAt&apiKey=e38d0ce8e7ce4039aebfcd6a634ffe9c")
 	if err!=nil{
 		log.Fatal(err)
 	}
